@@ -51,8 +51,5 @@
 
 | 智能食材选择 | 个性化 TDEE 弹窗 |
 | :---: | :---: |
-| ![首页截图](<img width="1915" height="944" alt="image" src="https://github.com/user-attachments/assets/53541fb7-b480-4aa2-adad-d4a366e8757e" />
-) | ![弹窗截图](<img width="447" height="587" alt="image" src="https://github.com/user-attachments/assets/57695308-9d38-4d80-b46e-3f9810e5a6f0" />
-) |
-
+| ![首页截图](https://github.com/user-attachments/assets/53541fb7-b480-4aa2-adad-d4a366e8757e) | ![弹窗截图](https://github.com/user-attachments/assets/57695308-9d38-4d80-b46e-3f9810e5a6f0) |
 ---

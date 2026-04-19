@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百味智选 - Smart Food Chef</title>
+    <link rel="icon" href="/assets/logo.jpg" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
+        <div class="container mx-auto flex h-14 items-center justify-between px-4">
+            <div class="flex items-center gap-2">
+                <img src="/assets/logo.jpg" alt="百味智选 Logo" class="h-10 w-auto object-contain" />
+                <span class="text-lg font-semibold text-foreground">百味智选</span>
+            </div>
+            <nav class="flex items-center gap-2">
+                <button id="btn-about" class="px-3 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground rounded-lg transition-colors">关于</button>
+                <button id="btn-help" class="px-3 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground rounded-lg transition-colors">使用帮助</button>
+                <button id="btn-personalize" class="px-3 py-1.5 text-sm text-accent-foreground bg-accent hover:bg-accent/90 rounded-lg transition-colors">个性化</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto flex-1 px-4 py-6">
+        <div class="grid h-[calc(100vh-8rem)] gap-4 lg:grid-cols-[1fr_1fr_320px]">
+            <!-- Left - Ingredient Panel -->
+            <div id="ingredient-panel" class="flex flex-col min-h-0 overflow-hidden rounded-2xl border border-border/50 bg-card p-4 shadow-sm">
+                <h2 class="mb-4 text-lg font-semibold text-foreground shrink-0">食材仓库</h2>
+
+                <!-- Category Tabs -->
+                <div id="category-tabs" class="mb-4 flex gap-1 rounded-xl bg-muted p-1 shrink-0">
+                    <!-- Tabs will be rendered by JS -->
+                </div>
+
+                <!-- Ingredient Grid -->
+                <div id="ingredients-grid" class="grid flex-1 grid-cols-2 gap-3 overflow-y-auto pr-1 lg:grid-cols-3 custom-scrollbar">
+                    <!-- Ingredient cards will be rendered by JS -->
+                </div>
+            </div>
+
+            <!-- Middle - Recipe Panel (Selected Ingredients) -->
+            <div class="flex flex-col min-h-0 overflow-hidden rounded-2xl border border-border/50 bg-card p-4 shadow-sm">
+                <h2 class="mb-4 text-lg font-semibold text-foreground">实时配方</h2>
+
+                <!-- Selected Tags -->
+                <div id="selected-tags" class="mb-4 flex flex-wrap gap-2">
+                    <!-- Selected ingredient tags will be rendered by JS -->
+                </div>
+
+                <!-- Amount Inputs -->
+                <div id="selected-list" class="flex-1 space-y-3 overflow-y-auto pr-1 custom-scrollbar">
+                    <!-- Selected ingredients with amount inputs will be rendered by JS -->
+                </div>
+            </div>
+
+            <!-- Right - Nutrition Panel (Desktop only) -->
+            <div id="nutrition-panel" class="hidden flex-col min-h-0 overflow-y-auto rounded-2xl border border-border/30 bg-card/80 p-4 shadow-lg backdrop-blur-xl lg:flex custom-scrollbar">
+                <h2 class="mb-4 text-lg font-semibold text-foreground">数据看板</h2>
+
+                <!-- Total Calories -->
+                <div class="mb-6 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-4 text-center">
+                    <div class="mb-1 flex items-center justify-center gap-2">
+                        <span class="text-xl">🔥</span>
+                        <span class="text-sm text-muted-foreground">总热量</span>
+                    </div>
+                    <p class="text-4xl font-bold text-foreground">
+                        <span id="total-calories">0</span>
+                        <span class="ml-1 text-lg font-normal text-muted-foreground">kcal</span>
+                    </p>
+                </div>
+
+                <!-- Macro Rings -->
+                <div class="mb-6 flex justify-around">
+                    <div class="flex flex-col items-center">
+                        <div class="relative h-20 w-20">
+                            <svg class="h-20 w-20 -rotate-90" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="36" fill="none" stroke-width="6" class="stroke-muted"/>
+                                <circle id="protein-ring" cx="40" cy="40" r="36" fill="none" stroke-width="6" stroke-linecap="round" class="stroke-chart-1" stroke-dasharray="226.2" stroke-dashoffset="226.2"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-xl">🥩</span>
+                            </div>
+                        </div>
+                        <p id="total-protein" class="mt-1 text-sm font-medium text-foreground">0.0g</p>
+                        <p class="text-xs text-muted-foreground">蛋白质</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="relative h-20 w-20">
+                            <svg class="h-20 w-20 -rotate-90" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="36" fill="none" stroke-width="6" class="stroke-muted"/>
+                                <circle id="carbs-ring" cx="40" cy="40" r="36" fill="none" stroke-width="6" stroke-linecap="round" class="stroke-chart-2" stroke-dasharray="226.2" stroke-dashoffset="226.2"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-xl">🌾</span>
+                            </div>
+                        </div>
+                        <p id="total-carbs" class="mt-1 text-sm font-medium text-foreground">0.0g</p>
+                        <p class="text-xs text-muted-foreground">碳水</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="relative h-20 w-20">
+                            <svg class="h-20 w-20 -rotate-90" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="36" fill="none" stroke-width="6" class="stroke-muted"/>
+                                <circle id="fat-ring" cx="40" cy="40" r="36" fill="none" stroke-width="6" stroke-linecap="round" class="stroke-chart-3" stroke-dasharray="226.2" stroke-dashoffset="226.2"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-xl">🫒</span>
+                            </div>
+                        </div>
+                        <p id="total-fat" class="mt-1 text-sm font-medium text-foreground">0.0g</p>
+                        <p class="text-xs text-muted-foreground">脂肪</p>
+                    </div>
+                </div>
+
+                <!-- Daily Target Section -->
+                <div class="mb-6 rounded-2xl border border-border/30 bg-muted/50 p-4">
+                    <h3 class="mb-3 text-sm font-medium text-foreground">每日推荐摄入目标</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-muted-foreground">热量</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-muted-foreground" id="remaining-calories">-- kcal</span>
+                                <span class="text-sm font-medium text-foreground" id="target-calories">-- kcal</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-muted-foreground">蛋白质</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-muted-foreground" id="remaining-protein">-- g</span>
+                                <span class="text-sm font-medium text-foreground" id="target-protein">-- g</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-muted-foreground">碳水</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-muted-foreground" id="remaining-carbs">-- g</span>
+                                <span class="text-sm font-medium text-foreground" id="target-carbs">-- g</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-muted-foreground">脂肪</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-muted-foreground" id="remaining-fat">-- g</span>
+                                <span class="text-sm font-medium text-foreground" id="target-fat">-- g</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Recipes -->
+                <div class="flex-1 flex flex-col min-h-0 overflow-hidden">
+                    <h3 class="mb-3 text-sm font-medium text-foreground shrink-0">推荐菜谱</h3>
+                    <div id="recipes-container" class="flex-1 flex flex-col gap-2 overflow-y-auto pr-1">
+                        <!-- Recipe cards will be rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Health Tips -->
+                <div class="mt-4 rounded-2xl border border-primary/10 bg-primary/5 p-4">
+                    <div class="mb-2 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="flex h-6 w-6 items-center justify-center rounded-lg bg-primary/10">
+                                <span class="text-sm">💡</span>
+                            </div>
+                            <span class="text-xs font-medium text-primary">健康小知识</span>
+                        </div>
+                        <button id="btn-refresh-tip" class="flex h-6 w-6 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary">
+                            <span class="text-sm">🔄</span>
+                        </button>
+                    </div>
+                    <p class="text-sm leading-relaxed text-foreground/80" id="health-tip">
+                        点击右上角按钮获取健康小知识
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile FAB for Nutrition Panel -->
+    <button id="mobile-fab" class="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg lg:hidden">
+        <span class="text-2xl">📊</span>
+    </button>
+
+    <!-- About Modal -->
+    <div id="modal-about" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50">
+        <div class="mx-4 max-w-md rounded-2xl bg-card p-6 shadow-lg">
+            <h3 class="mb-4 text-lg font-semibold text-foreground">关于百味智选</h3>
+            <p class="mb-4 text-sm text-muted-foreground">百味智选是一款智能食材搭配工具，帮助您根据现有食材计算营养成分，并推荐合适的菜谱。</p>
+            <p class="mb-4 text-sm text-muted-foreground">版本：1.0.0</p>
+            <button onclick="closeModal('modal-about')" class="w-full rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">关闭</button>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="modal-help" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50">
+        <div class="mx-4 max-w-md rounded-2xl bg-card p-6 shadow-lg">
+            <h3 class="mb-4 text-lg font-semibold text-foreground">使用帮助</h3>
+            <div class="mb-4 space-y-2 text-sm text-muted-foreground">
+                <p><strong>1. 选择食材：</strong>点击左侧分类标签切换类别，点击食材卡片选中/取消选中。</p>
+                <p><strong>2. 调整克重：</strong>在中间面板可以调整每种食材的重量（克）。</p>
+                <p><strong>3. 查看营养：</strong>右侧面板实时显示营养成分总和。</p>
+                <p><strong>4. 推荐菜谱：</strong>根据已选食材自动推荐匹配度≥70%的菜谱。</p>
+                <p><strong>5. 查看教程：</strong>点击菜谱卡片可跳转到B站查看教学视频。</p>
+            </div>
+            <button onclick="closeModal('modal-help')" class="w-full rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">关闭</button>
+        </div>
+    </div>
+
+    <!-- Personalize Modal -->
+    <div id="modal-personalize" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50">
+        <div class="mx-4 max-w-md rounded-2xl bg-card p-6 shadow-lg">
+            <div class="mb-4 flex flex-col items-center">
+                <img src="/assets/logo.jpg" alt="百味智选 Logo" class="mb-2 h-12 w-auto object-contain" />
+                <h3 class="text-lg font-semibold text-foreground">个性化健康方案</h3>
+            </div>
+            <div class="space-y-5">
+                <!-- Basic Info Row -->
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="space-y-1.5">
+                        <label for="height" class="text-xs text-muted-foreground">身高 (cm)</label>
+                        <input type="number" id="height" placeholder="170" class="h-10 w-full rounded-xl border border-border/50 bg-muted/50 px-2 text-center focus:border-primary focus:ring-primary" />
+                    </div>
+                    <div class="space-y-1.5">
+                        <label for="weight" class="text-xs text-muted-foreground">体重 (kg)</label>
+                        <input type="number" id="weight" placeholder="65" class="h-10 w-full rounded-xl border border-border/50 bg-muted/50 px-2 text-center focus:border-primary focus:ring-primary" />
+                    </div>
+                    <div class="space-y-1.5">
+                        <label for="age" class="text-xs text-muted-foreground">年龄</label>
+                        <input type="number" id="age" placeholder="25" class="h-10 w-full rounded-xl border border-border/50 bg-muted/50 px-2 text-center focus:border-primary focus:ring-primary" />
+                    </div>
+                </div>
+
+                <!-- Gender Selection -->
+                <div class="space-y-1.5">
+                    <label class="text-xs text-muted-foreground">性别</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button type="button" id="gender-male" class="flex h-10 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-sm font-medium text-muted-foreground transition-all hover:border-primary/50 hover:text-foreground">
+                            男性
+                        </button>
+                        <button type="button" id="gender-female" class="flex h-10 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-sm font-medium text-muted-foreground transition-all hover:border-primary/50 hover:text-foreground">
+                            女性
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Activity Level -->
+                <div class="space-y-1.5">
+                    <label class="text-xs text-muted-foreground">每日活动水平</label>
+                    <select id="activity-level" class="h-10 w-full rounded-xl border border-border/50 bg-muted/50 px-2 focus:border-primary focus:ring-primary">
+                        <option value="">选择活动水平</option>
+                        <option value="sedentary">久坐（办公室工作）</option>
+                        <option value="light">轻度（偶尔运动）</option>
+                        <option value="moderate">中度（规律运动）</option>
+                    </select>
+                </div>
+
+                <!-- Goal -->
+                <div class="space-y-1.5">
+                    <label class="text-xs text-muted-foreground">健康目标</label>
+                    <select id="goal" class="h-10 w-full rounded-xl border border-border/50 bg-muted/50 px-2 focus:border-primary focus:ring-primary">
+                        <option value="">选择您的目标</option>
+                        <option value="muscle">增肌塑形</option>
+                        <option value="fat_loss">减脂瘦身</option>
+                        <option value="maintain">维持健康</option>
+                    </select>
+                </div>
+            </div>
+            <button id="btn-submit-personalize" class="mt-4 w-full h-10 rounded-lg border border-primary bg-primary text-sm font-medium text-primary-foreground hover:bg-primary/90">
+                生成我的健康方案
+            </button>
+            <button onclick="closeModal('modal-personalize')" class="mt-2 w-full h-10 rounded-lg border border-border bg-background text-sm font-medium text-foreground hover:bg-muted">
+                取消
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

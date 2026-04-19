@@ -1,0 +1,1245 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "total": 100,
+    "categories": [
+      "meat",
+      "vegetable",
+      "staple",
+      "seasoning"
+    ],
+    "unit": {
+      "weight": "g",
+      "calories": "kcal",
+      "protein": "g",
+      "fat": "g",
+      "carbs": "g"
+    },
+    "description": "每项营养数据均以100g可食部分为基准",
+    "updated_at": "2025-04-18"
+  },
+  "categories": [
+    {
+      "id": "meat",
+      "label": "荤食",
+      "description": "肉类、海鲜、蛋奶等动物性食材"
+    },
+    {
+      "id": "vegetable",
+      "label": "素食",
+      "description": "蔬菜、菌菇、豆类等植物性食材"
+    },
+    {
+      "id": "staple",
+      "label": "主食",
+      "description": "米、面、杂粮等主食类食材"
+    },
+    {
+      "id": "seasoning",
+      "label": "调味剂",
+      "description": "油、盐、酱料等调味类食材"
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "M001",
+      "category": "meat",
+      "name": "猪里脊肉",
+      "name_en": "Pork Tenderloin",
+      "per_100g": {
+        "calories": 155,
+        "protein": 20.2,
+        "fat": 7.9,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M002",
+      "category": "meat",
+      "name": "猪五花肉",
+      "name_en": "Pork Belly",
+      "per_100g": {
+        "calories": 395,
+        "protein": 7.7,
+        "fat": 35.3,
+        "carbs": 2.4
+      }
+    },
+    {
+      "id": "M003",
+      "category": "meat",
+      "name": "猪排骨",
+      "name_en": "Pork Ribs",
+      "per_100g": {
+        "calories": 278,
+        "protein": 16.7,
+        "fat": 23.1,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M004",
+      "category": "meat",
+      "name": "鸡胸肉",
+      "name_en": "Chicken Breast",
+      "per_100g": {
+        "calories": 133,
+        "protein": 24.6,
+        "fat": 3.1,
+        "carbs": 1.3
+      }
+    },
+    {
+      "id": "M005",
+      "category": "meat",
+      "name": "鸡腿肉",
+      "name_en": "Chicken Thigh",
+      "per_100g": {
+        "calories": 181,
+        "protein": 16.0,
+        "fat": 13.0,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M006",
+      "category": "meat",
+      "name": "鸡翅",
+      "name_en": "Chicken Wings",
+      "per_100g": {
+        "calories": 194,
+        "protein": 17.4,
+        "fat": 11.8,
+        "carbs": 4.6
+      }
+    },
+    {
+      "id": "M007",
+      "category": "meat",
+      "name": "牛里脊",
+      "name_en": "Beef Tenderloin",
+      "per_100g": {
+        "calories": 107,
+        "protein": 22.2,
+        "fat": 0.9,
+        "carbs": 2.4
+      }
+    },
+    {
+      "id": "M008",
+      "category": "meat",
+      "name": "牛腩",
+      "name_en": "Beef Brisket",
+      "per_100g": {
+        "calories": 332,
+        "protein": 17.1,
+        "fat": 29.3,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M009",
+      "category": "meat",
+      "name": "羊肉",
+      "name_en": "Lamb",
+      "per_100g": {
+        "calories": 203,
+        "protein": 19.0,
+        "fat": 14.1,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M010",
+      "category": "meat",
+      "name": "鸭肉",
+      "name_en": "Duck",
+      "per_100g": {
+        "calories": 240,
+        "protein": 15.5,
+        "fat": 19.7,
+        "carbs": 0.2
+      }
+    },
+    {
+      "id": "M011",
+      "category": "meat",
+      "name": "草鱼",
+      "name_en": "Grass Carp",
+      "per_100g": {
+        "calories": 113,
+        "protein": 16.6,
+        "fat": 5.2,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M012",
+      "category": "meat",
+      "name": "鲈鱼",
+      "name_en": "Sea Bass",
+      "per_100g": {
+        "calories": 105,
+        "protein": 18.6,
+        "fat": 3.4,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M013",
+      "category": "meat",
+      "name": "三文鱼",
+      "name_en": "Salmon",
+      "per_100g": {
+        "calories": 208,
+        "protein": 20.1,
+        "fat": 13.4,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M014",
+      "category": "meat",
+      "name": "虾",
+      "name_en": "Shrimp",
+      "per_100g": {
+        "calories": 93,
+        "protein": 18.6,
+        "fat": 0.8,
+        "carbs": 2.8
+      }
+    },
+    {
+      "id": "M015",
+      "category": "meat",
+      "name": "螃蟹",
+      "name_en": "Crab",
+      "per_100g": {
+        "calories": 103,
+        "protein": 17.5,
+        "fat": 2.6,
+        "carbs": 2.3
+      }
+    },
+    {
+      "id": "M016",
+      "category": "meat",
+      "name": "鱿鱼",
+      "name_en": "Squid",
+      "per_100g": {
+        "calories": 92,
+        "protein": 17.0,
+        "fat": 0.8,
+        "carbs": 3.1
+      }
+    },
+    {
+      "id": "M017",
+      "category": "meat",
+      "name": "蛤蜊",
+      "name_en": "Clam",
+      "per_100g": {
+        "calories": 62,
+        "protein": 10.1,
+        "fat": 1.1,
+        "carbs": 2.8
+      }
+    },
+    {
+      "id": "M018",
+      "category": "meat",
+      "name": "鸡蛋",
+      "name_en": "Egg",
+      "per_100g": {
+        "calories": 144,
+        "protein": 13.1,
+        "fat": 8.8,
+        "carbs": 2.8
+      }
+    },
+    {
+      "id": "M019",
+      "category": "meat",
+      "name": "鸭蛋",
+      "name_en": "Duck Egg",
+      "per_100g": {
+        "calories": 180,
+        "protein": 12.6,
+        "fat": 13.0,
+        "carbs": 3.1
+      }
+    },
+    {
+      "id": "M020",
+      "category": "meat",
+      "name": "全脂牛奶",
+      "name_en": "Whole Milk",
+      "per_100g": {
+        "calories": 66,
+        "protein": 3.0,
+        "fat": 3.7,
+        "carbs": 4.9
+      }
+    },
+    {
+      "id": "M021",
+      "category": "meat",
+      "name": "猪肝",
+      "name_en": "Pork Liver",
+      "per_100g": {
+        "calories": 129,
+        "protein": 19.3,
+        "fat": 3.5,
+        "carbs": 5.0
+      }
+    },
+    {
+      "id": "M022",
+      "category": "meat",
+      "name": "培根",
+      "name_en": "Bacon",
+      "per_100g": {
+        "calories": 458,
+        "protein": 12.5,
+        "fat": 45.0,
+        "carbs": 0.6
+      }
+    },
+    {
+      "id": "M023",
+      "category": "meat",
+      "name": "金枪鱼（罐装）",
+      "name_en": "Canned Tuna",
+      "per_100g": {
+        "calories": 116,
+        "protein": 25.5,
+        "fat": 1.0,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "M024",
+      "category": "meat",
+      "name": "带鱼",
+      "name_en": "Hairtail Fish",
+      "per_100g": {
+        "calories": 127,
+        "protein": 17.7,
+        "fat": 4.9,
+        "carbs": 3.1
+      }
+    },
+    {
+      "id": "M025",
+      "category": "meat",
+      "name": "原味酸奶",
+      "name_en": "Plain Yogurt",
+      "per_100g": {
+        "calories": 72,
+        "protein": 2.5,
+        "fat": 2.7,
+        "carbs": 9.3
+      }
+    },
+    {
+      "id": "V001",
+      "category": "vegetable",
+      "name": "菠菜",
+      "name_en": "Spinach",
+      "per_100g": {
+        "calories": 28,
+        "protein": 2.6,
+        "fat": 0.3,
+        "carbs": 4.3
+      }
+    },
+    {
+      "id": "V002",
+      "category": "vegetable",
+      "name": "西兰花",
+      "name_en": "Broccoli",
+      "per_100g": {
+        "calories": 34,
+        "protein": 2.8,
+        "fat": 0.4,
+        "carbs": 6.6
+      }
+    },
+    {
+      "id": "V003",
+      "category": "vegetable",
+      "name": "胡萝卜",
+      "name_en": "Carrot",
+      "per_100g": {
+        "calories": 41,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 9.6
+      }
+    },
+    {
+      "id": "V004",
+      "category": "vegetable",
+      "name": "西红柿",
+      "name_en": "Tomato",
+      "per_100g": {
+        "calories": 18,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 3.9
+      }
+    },
+    {
+      "id": "V005",
+      "category": "vegetable",
+      "name": "黄瓜",
+      "name_en": "Cucumber",
+      "per_100g": {
+        "calories": 16,
+        "protein": 0.7,
+        "fat": 0.1,
+        "carbs": 3.6
+      }
+    },
+    {
+      "id": "V006",
+      "category": "vegetable",
+      "name": "白菜",
+      "name_en": "Napa Cabbage",
+      "per_100g": {
+        "calories": 17,
+        "protein": 1.2,
+        "fat": 0.1,
+        "carbs": 3.8
+      }
+    },
+    {
+      "id": "V007",
+      "category": "vegetable",
+      "name": "茄子",
+      "name_en": "Eggplant",
+      "per_100g": {
+        "calories": 25,
+        "protein": 1.1,
+        "fat": 0.2,
+        "carbs": 5.9
+      }
+    },
+    {
+      "id": "V008",
+      "category": "vegetable",
+      "name": "青椒",
+      "name_en": "Green Pepper",
+      "per_100g": {
+        "calories": 23,
+        "protein": 1.0,
+        "fat": 0.2,
+        "carbs": 5.4
+      }
+    },
+    {
+      "id": "V009",
+      "category": "vegetable",
+      "name": "洋葱",
+      "name_en": "Onion",
+      "per_100g": {
+        "calories": 40,
+        "protein": 1.1,
+        "fat": 0.1,
+        "carbs": 9.3
+      }
+    },
+    {
+      "id": "V010",
+      "category": "vegetable",
+      "name": "大蒜",
+      "name_en": "Garlic",
+      "per_100g": {
+        "calories": 135,
+        "protein": 4.5,
+        "fat": 0.2,
+        "carbs": 29.0
+      }
+    },
+    {
+      "id": "V011",
+      "category": "vegetable",
+      "name": "生姜",
+      "name_en": "Ginger",
+      "per_100g": {
+        "calories": 80,
+        "protein": 1.3,
+        "fat": 0.6,
+        "carbs": 17.9
+      }
+    },
+    {
+      "id": "V012",
+      "category": "vegetable",
+      "name": "香菇",
+      "name_en": "Shiitake Mushroom",
+      "per_100g": {
+        "calories": 26,
+        "protein": 2.2,
+        "fat": 0.3,
+        "carbs": 5.2
+      }
+    },
+    {
+      "id": "V013",
+      "category": "vegetable",
+      "name": "金针菇",
+      "name_en": "Enoki Mushroom",
+      "per_100g": {
+        "calories": 26,
+        "protein": 1.8,
+        "fat": 0.4,
+        "carbs": 5.1
+      }
+    },
+    {
+      "id": "V014",
+      "category": "vegetable",
+      "name": "豆腐",
+      "name_en": "Tofu",
+      "per_100g": {
+        "calories": 76,
+        "protein": 8.1,
+        "fat": 3.7,
+        "carbs": 3.4
+      }
+    },
+    {
+      "id": "V015",
+      "category": "vegetable",
+      "name": "黄豆",
+      "name_en": "Soybean",
+      "per_100g": {
+        "calories": 359,
+        "protein": 35.1,
+        "fat": 16.0,
+        "carbs": 34.2
+      }
+    },
+    {
+      "id": "V016",
+      "category": "vegetable",
+      "name": "绿豆",
+      "name_en": "Mung Bean",
+      "per_100g": {
+        "calories": 316,
+        "protein": 21.6,
+        "fat": 0.8,
+        "carbs": 62.0
+      }
+    },
+    {
+      "id": "V017",
+      "category": "vegetable",
+      "name": "土豆",
+      "name_en": "Potato",
+      "per_100g": {
+        "calories": 77,
+        "protein": 2.0,
+        "fat": 0.1,
+        "carbs": 17.2
+      }
+    },
+    {
+      "id": "V018",
+      "category": "vegetable",
+      "name": "冬瓜",
+      "name_en": "Winter Melon",
+      "per_100g": {
+        "calories": 11,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 2.6
+      }
+    },
+    {
+      "id": "V019",
+      "category": "vegetable",
+      "name": "南瓜",
+      "name_en": "Pumpkin",
+      "per_100g": {
+        "calories": 26,
+        "protein": 1.0,
+        "fat": 0.1,
+        "carbs": 6.5
+      }
+    },
+    {
+      "id": "V020",
+      "category": "vegetable",
+      "name": "豆芽",
+      "name_en": "Bean Sprouts",
+      "per_100g": {
+        "calories": 30,
+        "protein": 3.2,
+        "fat": 0.1,
+        "carbs": 5.9
+      }
+    },
+    {
+      "id": "V021",
+      "category": "vegetable",
+      "name": "芹菜",
+      "name_en": "Celery",
+      "per_100g": {
+        "calories": 14,
+        "protein": 0.7,
+        "fat": 0.1,
+        "carbs": 3.1
+      }
+    },
+    {
+      "id": "V022",
+      "category": "vegetable",
+      "name": "韭菜",
+      "name_en": "Chinese Chives",
+      "per_100g": {
+        "calories": 29,
+        "protein": 2.4,
+        "fat": 0.4,
+        "carbs": 4.6
+      }
+    },
+    {
+      "id": "V023",
+      "category": "vegetable",
+      "name": "莲藕",
+      "name_en": "Lotus Root",
+      "per_100g": {
+        "calories": 74,
+        "protein": 1.9,
+        "fat": 0.2,
+        "carbs": 17.8
+      }
+    },
+    {
+      "id": "V024",
+      "category": "vegetable",
+      "name": "玉米（鲜）",
+      "name_en": "Fresh Corn",
+      "per_100g": {
+        "calories": 112,
+        "protein": 4.0,
+        "fat": 1.2,
+        "carbs": 22.8
+      }
+    },
+    {
+      "id": "V025",
+      "category": "vegetable",
+      "name": "花椰菜",
+      "name_en": "Cauliflower",
+      "per_100g": {
+        "calories": 25,
+        "protein": 1.9,
+        "fat": 0.3,
+        "carbs": 5.0
+      }
+    },
+    {
+      "id": "S001",
+      "category": "staple",
+      "name": "白米饭（熟）",
+      "name_en": "Cooked White Rice",
+      "per_100g": {
+        "calories": 130,
+        "protein": 2.7,
+        "fat": 0.3,
+        "carbs": 28.2
+      }
+    },
+    {
+      "id": "S002",
+      "category": "staple",
+      "name": "大米（生）",
+      "name_en": "Raw White Rice",
+      "per_100g": {
+        "calories": 344,
+        "protein": 7.8,
+        "fat": 0.6,
+        "carbs": 76.8
+      }
+    },
+    {
+      "id": "S003",
+      "category": "staple",
+      "name": "糙米",
+      "name_en": "Brown Rice",
+      "per_100g": {
+        "calories": 363,
+        "protein": 7.9,
+        "fat": 2.7,
+        "carbs": 77.2
+      }
+    },
+    {
+      "id": "S004",
+      "category": "staple",
+      "name": "小麦面粉（中筋）",
+      "name_en": "All-Purpose Flour",
+      "per_100g": {
+        "calories": 361,
+        "protein": 10.3,
+        "fat": 1.1,
+        "carbs": 75.2
+      }
+    },
+    {
+      "id": "S005",
+      "category": "staple",
+      "name": "全麦面粉",
+      "name_en": "Whole Wheat Flour",
+      "per_100g": {
+        "calories": 340,
+        "protein": 13.7,
+        "fat": 2.5,
+        "carbs": 72.0
+      }
+    },
+    {
+      "id": "S006",
+      "category": "staple",
+      "name": "白面包",
+      "name_en": "White Bread",
+      "per_100g": {
+        "calories": 266,
+        "protein": 8.9,
+        "fat": 3.4,
+        "carbs": 49.2
+      }
+    },
+    {
+      "id": "S007",
+      "category": "staple",
+      "name": "全麦面包",
+      "name_en": "Whole Wheat Bread",
+      "per_100g": {
+        "calories": 247,
+        "protein": 9.7,
+        "fat": 3.0,
+        "carbs": 44.9
+      }
+    },
+    {
+      "id": "S008",
+      "category": "staple",
+      "name": "挂面（干）",
+      "name_en": "Dried Noodles",
+      "per_100g": {
+        "calories": 353,
+        "protein": 11.4,
+        "fat": 0.6,
+        "carbs": 73.4
+      }
+    },
+    {
+      "id": "S009",
+      "category": "staple",
+      "name": "意大利面（干）",
+      "name_en": "Dry Pasta",
+      "per_100g": {
+        "calories": 371,
+        "protein": 13.0,
+        "fat": 1.5,
+        "carbs": 75.0
+      }
+    },
+    {
+      "id": "S010",
+      "category": "staple",
+      "name": "燕麦片",
+      "name_en": "Oats",
+      "per_100g": {
+        "calories": 389,
+        "protein": 16.9,
+        "fat": 6.9,
+        "carbs": 66.3
+      }
+    },
+    {
+      "id": "S011",
+      "category": "staple",
+      "name": "小米",
+      "name_en": "Millet",
+      "per_100g": {
+        "calories": 361,
+        "protein": 11.0,
+        "fat": 3.1,
+        "carbs": 73.5
+      }
+    },
+    {
+      "id": "S012",
+      "category": "staple",
+      "name": "玉米面",
+      "name_en": "Cornmeal",
+      "per_100g": {
+        "calories": 360,
+        "protein": 8.8,
+        "fat": 3.8,
+        "carbs": 70.0
+      }
+    },
+    {
+      "id": "S013",
+      "category": "staple",
+      "name": "红薯",
+      "name_en": "Sweet Potato",
+      "per_100g": {
+        "calories": 87,
+        "protein": 1.6,
+        "fat": 0.1,
+        "carbs": 20.1
+      }
+    },
+    {
+      "id": "S014",
+      "category": "staple",
+      "name": "山药",
+      "name_en": "Chinese Yam",
+      "per_100g": {
+        "calories": 56,
+        "protein": 1.9,
+        "fat": 0.2,
+        "carbs": 12.4
+      }
+    },
+    {
+      "id": "S015",
+      "category": "staple",
+      "name": "馒头",
+      "name_en": "Steamed Bun",
+      "per_100g": {
+        "calories": 223,
+        "protein": 7.0,
+        "fat": 1.1,
+        "carbs": 47.0
+      }
+    },
+    {
+      "id": "S016",
+      "category": "staple",
+      "name": "荞麦面",
+      "name_en": "Buckwheat Noodles",
+      "per_100g": {
+        "calories": 337,
+        "protein": 12.2,
+        "fat": 2.3,
+        "carbs": 70.6
+      }
+    },
+    {
+      "id": "S017",
+      "category": "staple",
+      "name": "藜麦",
+      "name_en": "Quinoa",
+      "per_100g": {
+        "calories": 368,
+        "protein": 14.1,
+        "fat": 6.1,
+        "carbs": 64.2
+      }
+    },
+    {
+      "id": "S018",
+      "category": "staple",
+      "name": "糯米",
+      "name_en": "Glutinous Rice",
+      "per_100g": {
+        "calories": 350,
+        "protein": 6.7,
+        "fat": 1.0,
+        "carbs": 78.3
+      }
+    },
+    {
+      "id": "S019",
+      "category": "staple",
+      "name": "粉丝（干）",
+      "name_en": "Dry Glass Noodles",
+      "per_100g": {
+        "calories": 335,
+        "protein": 0.8,
+        "fat": 0.1,
+        "carbs": 84.2
+      }
+    },
+    {
+      "id": "S020",
+      "category": "staple",
+      "name": "饺子皮",
+      "name_en": "Dumpling Wrapper",
+      "per_100g": {
+        "calories": 287,
+        "protein": 9.0,
+        "fat": 0.8,
+        "carbs": 62.0
+      }
+    },
+    {
+      "id": "C001",
+      "category": "seasoning",
+      "name": "食盐",
+      "name_en": "Table Salt",
+      "per_100g": {
+        "calories": 0,
+        "protein": 0.0,
+        "fat": 0.0,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "C002",
+      "category": "seasoning",
+      "name": "白砂糖",
+      "name_en": "White Sugar",
+      "per_100g": {
+        "calories": 400,
+        "protein": 0.0,
+        "fat": 0.0,
+        "carbs": 99.9
+      }
+    },
+    {
+      "id": "C003",
+      "category": "seasoning",
+      "name": "生抽酱油",
+      "name_en": "Light Soy Sauce",
+      "per_100g": {
+        "calories": 66,
+        "protein": 5.5,
+        "fat": 0.1,
+        "carbs": 10.1
+      }
+    },
+    {
+      "id": "C004",
+      "category": "seasoning",
+      "name": "老抽酱油",
+      "name_en": "Dark Soy Sauce",
+      "per_100g": {
+        "calories": 130,
+        "protein": 7.0,
+        "fat": 0.2,
+        "carbs": 20.0
+      }
+    },
+    {
+      "id": "C005",
+      "category": "seasoning",
+      "name": "菜籽油",
+      "name_en": "Canola Oil",
+      "per_100g": {
+        "calories": 900,
+        "protein": 0.0,
+        "fat": 100.0,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "C006",
+      "category": "seasoning",
+      "name": "香油（芝麻油）",
+      "name_en": "Sesame Oil",
+      "per_100g": {
+        "calories": 898,
+        "protein": 0.0,
+        "fat": 99.7,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "C007",
+      "category": "seasoning",
+      "name": "米醋",
+      "name_en": "Rice Vinegar",
+      "per_100g": {
+        "calories": 31,
+        "protein": 1.0,
+        "fat": 0.0,
+        "carbs": 6.9
+      }
+    },
+    {
+      "id": "C008",
+      "category": "seasoning",
+      "name": "料酒",
+      "name_en": "Cooking Wine",
+      "per_100g": {
+        "calories": 80,
+        "protein": 1.3,
+        "fat": 0.0,
+        "carbs": 7.0
+      }
+    },
+    {
+      "id": "C009",
+      "category": "seasoning",
+      "name": "豆瓣酱",
+      "name_en": "Doubanjiang",
+      "per_100g": {
+        "calories": 135,
+        "protein": 8.2,
+        "fat": 7.7,
+        "carbs": 9.1
+      }
+    },
+    {
+      "id": "C010",
+      "category": "seasoning",
+      "name": "甜面酱",
+      "name_en": "Sweet Bean Paste",
+      "per_100g": {
+        "calories": 136,
+        "protein": 5.0,
+        "fat": 1.1,
+        "carbs": 27.0
+      }
+    },
+    {
+      "id": "C011",
+      "category": "seasoning",
+      "name": "番茄酱",
+      "name_en": "Ketchup",
+      "per_100g": {
+        "calories": 97,
+        "protein": 1.9,
+        "fat": 0.2,
+        "carbs": 24.9
+      }
+    },
+    {
+      "id": "C012",
+      "category": "seasoning",
+      "name": "蚝油",
+      "name_en": "Oyster Sauce",
+      "per_100g": {
+        "calories": 130,
+        "protein": 5.0,
+        "fat": 0.5,
+        "carbs": 26.7
+      }
+    },
+    {
+      "id": "C013",
+      "category": "seasoning",
+      "name": "花椒",
+      "name_en": "Sichuan Pepper",
+      "per_100g": {
+        "calories": 258,
+        "protein": 6.7,
+        "fat": 8.9,
+        "carbs": 43.5
+      }
+    },
+    {
+      "id": "C014",
+      "category": "seasoning",
+      "name": "八角",
+      "name_en": "Star Anise",
+      "per_100g": {
+        "calories": 337,
+        "protein": 15.8,
+        "fat": 15.8,
+        "carbs": 50.0
+      }
+    },
+    {
+      "id": "C015",
+      "category": "seasoning",
+      "name": "辣椒粉",
+      "name_en": "Chili Powder",
+      "per_100g": {
+        "calories": 282,
+        "protein": 12.8,
+        "fat": 14.3,
+        "carbs": 49.7
+      }
+    },
+    {
+      "id": "C016",
+      "category": "seasoning",
+      "name": "淀粉（玉米）",
+      "name_en": "Cornstarch",
+      "per_100g": {
+        "calories": 381,
+        "protein": 0.3,
+        "fat": 0.1,
+        "carbs": 91.7
+      }
+    },
+    {
+      "id": "C017",
+      "category": "seasoning",
+      "name": "蜂蜜",
+      "name_en": "Honey",
+      "per_100g": {
+        "calories": 304,
+        "protein": 0.3,
+        "fat": 0.0,
+        "carbs": 82.4
+      }
+    },
+    {
+      "id": "C018",
+      "category": "seasoning",
+      "name": "黄油",
+      "name_en": "Butter",
+      "per_100g": {
+        "calories": 717,
+        "protein": 0.9,
+        "fat": 81.1,
+        "carbs": 0.1
+      }
+    },
+    {
+      "id": "C019",
+      "category": "seasoning",
+      "name": "橄榄油",
+      "name_en": "Olive Oil",
+      "per_100g": {
+        "calories": 884,
+        "protein": 0.0,
+        "fat": 100.0,
+        "carbs": 0.0
+      }
+    },
+    {
+      "id": "C020",
+      "category": "seasoning",
+      "name": "芥末酱",
+      "name_en": "Mustard",
+      "per_100g": {
+        "calories": 180,
+        "protein": 7.8,
+        "fat": 9.9,
+        "carbs": 18.2
+      }
+    },
+    {
+      "id": "C021",
+      "category": "seasoning",
+      "name": "花生酱",
+      "name_en": "Peanut Butter",
+      "per_100g": {
+        "calories": 588,
+        "protein": 25.0,
+        "fat": 50.4,
+        "carbs": 20.1
+      }
+    },
+    {
+      "id": "C022",
+      "category": "seasoning",
+      "name": "芝麻酱",
+      "name_en": "Sesame Paste",
+      "per_100g": {
+        "calories": 618,
+        "protein": 19.3,
+        "fat": 52.7,
+        "carbs": 22.6
+      }
+    },
+    {
+      "id": "C023",
+      "category": "seasoning",
+      "name": "胡椒粉",
+      "name_en": "Black Pepper",
+      "per_100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "fat": 3.3,
+        "carbs": 63.7
+      }
+    },
+    {
+      "id": "C024",
+      "category": "seasoning",
+      "name": "五香粉",
+      "name_en": "Five-Spice Powder",
+      "per_100g": {
+        "calories": 353,
+        "protein": 10.8,
+        "fat": 12.6,
+        "carbs": 56.0
+      }
+    },
+    {
+      "id": "C025",
+      "category": "seasoning",
+      "name": "鸡精",
+      "name_en": "Chicken Bouillon",
+      "per_100g": {
+        "calories": 260,
+        "protein": 14.9,
+        "fat": 6.0,
+        "carbs": 42.0
+      }
+    },
+    {
+      "id": "S021",
+      "category": "staple",
+      "name": "薏米",
+      "name_en": "Job's Tears",
+      "per_100g": {
+        "calories": 361,
+        "protein": 12.8,
+        "fat": 3.3,
+        "carbs": 71.1
+      }
+    },
+    {
+      "id": "S022",
+      "category": "staple",
+      "name": "黑米",
+      "name_en": "Black Rice",
+      "per_100g": {
+        "calories": 341,
+        "protein": 9.4,
+        "fat": 2.5,
+        "carbs": 72.2
+      }
+    },
+    {
+      "id": "S023",
+      "category": "staple",
+      "name": "高粱米",
+      "name_en": "Sorghum",
+      "per_100g": {
+        "calories": 351,
+        "protein": 10.4,
+        "fat": 3.1,
+        "carbs": 74.7
+      }
+    },
+    {
+      "id": "S024",
+      "category": "staple",
+      "name": "芋头",
+      "name_en": "Taro",
+      "per_100g": {
+        "calories": 79,
+        "protein": 2.2,
+        "fat": 0.2,
+        "carbs": 18.1
+      }
+    },
+    {
+      "id": "S025",
+      "category": "staple",
+      "name": "木薯淀粉",
+      "name_en": "Tapioca Starch",
+      "per_100g": {
+        "calories": 358,
+        "protein": 0.1,
+        "fat": 0.1,
+        "carbs": 88.7
+      }
+    }
+  ]
+}

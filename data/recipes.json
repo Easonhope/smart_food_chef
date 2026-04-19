@@ -1,0 +1,552 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "total": 60,
+    "description": "基于食材库的中式家常菜谱，每个菜谱含核心食材ID、Bilibili搜索链接",
+    "ingredients_ref": "ingredients.json",
+    "bilibili_url_template": "https://search.bilibili.com/all?keyword={菜名}+做法+教程",
+    "updated_at": "2025-04-18"
+  },
+  "recipes": [
+    {
+      "id": "R001",
+      "name": "青椒炒肉",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["M001", "V008", "V010", "V011", "C001", "C003", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=青椒炒肉+做法+教程"
+    },
+    {
+      "id": "R002",
+      "name": "西红柿炒鸡蛋",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["M018", "V004", "V009", "C001", "C002", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=西红柿炒鸡蛋+做法+教程"
+    },
+    {
+      "id": "R003",
+      "name": "红烧肉",
+      "category": "红烧",
+      "difficulty": "中等",
+      "cook_time_min": 90,
+      "ingredients": ["M002", "V010", "V011", "C002", "C003", "C004", "C007", "C008", "C014"],
+      "url": "https://search.bilibili.com/all?keyword=红烧肉+做法+教程"
+    },
+    {
+      "id": "R004",
+      "name": "糖醋排骨",
+      "category": "糖醋",
+      "difficulty": "中等",
+      "cook_time_min": 60,
+      "ingredients": ["M003", "V010", "V011", "C001", "C002", "C007", "C008", "C005", "C016"],
+      "url": "https://search.bilibili.com/all?keyword=糖醋排骨+做法+教程"
+    },
+    {
+      "id": "R005",
+      "name": "宫保鸡丁",
+      "category": "川菜",
+      "difficulty": "中等",
+      "cook_time_min": 30,
+      "ingredients": ["M004", "V010", "V015", "C001", "C002", "C003", "C007", "C013", "C015", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=宫保鸡丁+做法+教程"
+    },
+    {
+      "id": "R006",
+      "name": "可乐鸡翅",
+      "category": "红烧",
+      "difficulty": "简单",
+      "cook_time_min": 35,
+      "ingredients": ["M006", "V010", "V011", "C001", "C003", "C004", "C008"],
+      "url": "https://search.bilibili.com/all?keyword=可乐鸡翅+做法+教程"
+    },
+    {
+      "id": "R007",
+      "name": "麻婆豆腐",
+      "category": "川菜",
+      "difficulty": "中等",
+      "cook_time_min": 25,
+      "ingredients": ["V014", "M001", "V010", "V011", "C001", "C005", "C009", "C013", "C015", "C016"],
+      "url": "https://search.bilibili.com/all?keyword=麻婆豆腐+做法+教程"
+    },
+    {
+      "id": "R008",
+      "name": "蒜泥白肉",
+      "category": "凉菜",
+      "difficulty": "中等",
+      "cook_time_min": 40,
+      "ingredients": ["M002", "V010", "V011", "C001", "C003", "C006", "C009", "C015"],
+      "url": "https://search.bilibili.com/all?keyword=蒜泥白肉+做法+教程"
+    },
+    {
+      "id": "R009",
+      "name": "回锅肉",
+      "category": "川菜",
+      "difficulty": "中等",
+      "cook_time_min": 40,
+      "ingredients": ["M002", "V008", "V009", "V010", "V011", "C009", "C010", "C003", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=回锅肉+做法+教程"
+    },
+    {
+      "id": "R010",
+      "name": "土豆炖牛腩",
+      "category": "炖煮",
+      "difficulty": "中等",
+      "cook_time_min": 90,
+      "ingredients": ["M008", "V017", "V003", "V009", "V010", "V011", "C001", "C003", "C004", "C008", "C014", "C024"],
+      "url": "https://search.bilibili.com/all?keyword=土豆炖牛腩+做法+教程"
+    },
+    {
+      "id": "R011",
+      "name": "葱爆羊肉",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["M009", "V009", "V010", "V011", "C001", "C003", "C007", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=葱爆羊肉+做法+教程"
+    },
+    {
+      "id": "R012",
+      "name": "北京烤鸭（家庭版）",
+      "category": "烤制",
+      "difficulty": "困难",
+      "cook_time_min": 120,
+      "ingredients": ["M010", "V010", "C004", "C010", "C017", "C006", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=北京烤鸭+家庭版+做法+教程"
+    },
+    {
+      "id": "R013",
+      "name": "清蒸鲈鱼",
+      "category": "蒸制",
+      "difficulty": "简单",
+      "cook_time_min": 25,
+      "ingredients": ["M012", "V010", "V011", "C001", "C003", "C006"],
+      "url": "https://search.bilibili.com/all?keyword=清蒸鲈鱼+做法+教程"
+    },
+    {
+      "id": "R014",
+      "name": "三文鱼刺身",
+      "category": "日式",
+      "difficulty": "简单",
+      "cook_time_min": 10,
+      "ingredients": ["M013", "V011", "C020", "C003"],
+      "url": "https://search.bilibili.com/all?keyword=三文鱼刺身+做法+教程"
+    },
+    {
+      "id": "R015",
+      "name": "蒜蓉蒸虾",
+      "category": "蒸制",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["M014", "V010", "C001", "C003", "C006", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=蒜蓉蒸虾+做法+教程"
+    },
+    {
+      "id": "R016",
+      "name": "香辣蟹",
+      "category": "川菜",
+      "difficulty": "中等",
+      "cook_time_min": 40,
+      "ingredients": ["M015", "V010", "V011", "V009", "C001", "C005", "C009", "C013", "C015", "C008"],
+      "url": "https://search.bilibili.com/all?keyword=香辣蟹+做法+教程"
+    },
+    {
+      "id": "R017",
+      "name": "铁板鱿鱼",
+      "category": "烧烤",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["M016", "V009", "V008", "C001", "C015", "C005", "C022"],
+      "url": "https://search.bilibili.com/all?keyword=铁板鱿鱼+做法+教程"
+    },
+    {
+      "id": "R018",
+      "name": "蛤蜊蒸蛋",
+      "category": "蒸制",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["M017", "M018", "C001", "C003", "C006"],
+      "url": "https://search.bilibili.com/all?keyword=蛤蜊蒸蛋+做法+教程"
+    },
+    {
+      "id": "R019",
+      "name": "水煮鱼",
+      "category": "川菜",
+      "difficulty": "中等",
+      "cook_time_min": 35,
+      "ingredients": ["M011", "V001", "V010", "V011", "C001", "C005", "C009", "C013", "C015", "C016"],
+      "url": "https://search.bilibili.com/all?keyword=水煮鱼+做法+教程"
+    },
+    {
+      "id": "R020",
+      "name": "猪肝炒菠菜",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["M021", "V001", "V010", "V011", "C001", "C003", "C005", "C008"],
+      "url": "https://search.bilibili.com/all?keyword=猪肝炒菠菜+做法+教程"
+    },
+    {
+      "id": "R021",
+      "name": "西兰花炒培根",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["M022", "V002", "V010", "C001", "C003", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=西兰花炒培根+做法+教程"
+    },
+    {
+      "id": "R022",
+      "name": "金枪鱼沙拉",
+      "category": "凉菜",
+      "difficulty": "简单",
+      "cook_time_min": 10,
+      "ingredients": ["M023", "V004", "V005", "C001", "C007", "C019"],
+      "url": "https://search.bilibili.com/all?keyword=金枪鱼沙拉+做法+教程"
+    },
+    {
+      "id": "R023",
+      "name": "红烧带鱼",
+      "category": "红烧",
+      "difficulty": "简单",
+      "cook_time_min": 30,
+      "ingredients": ["M024", "V010", "V011", "C001", "C002", "C003", "C004", "C005", "C008"],
+      "url": "https://search.bilibili.com/all?keyword=红烧带鱼+做法+教程"
+    },
+    {
+      "id": "R024",
+      "name": "酸奶水果沙拉",
+      "category": "凉菜",
+      "difficulty": "简单",
+      "cook_time_min": 10,
+      "ingredients": ["M025", "C017"],
+      "url": "https://search.bilibili.com/all?keyword=酸奶水果沙拉+做法+教程"
+    },
+    {
+      "id": "R025",
+      "name": "凉拌菠菜",
+      "category": "凉菜",
+      "difficulty": "简单",
+      "cook_time_min": 10,
+      "ingredients": ["V001", "V010", "C001", "C006", "C007", "C003"],
+      "url": "https://search.bilibili.com/all?keyword=凉拌菠菜+做法+教程"
+    },
+    {
+      "id": "R026",
+      "name": "清炒西兰花",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["V002", "V010", "C001", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=清炒西兰花+做法+教程"
+    },
+    {
+      "id": "R027",
+      "name": "胡萝卜炒玉米",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["V003", "V024", "V015", "C001", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=胡萝卜炒玉米+做法+教程"
+    },
+    {
+      "id": "R028",
+      "name": "番茄豆腐汤",
+      "category": "汤类",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["V004", "V014", "V009", "V010", "C001", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=番茄豆腐汤+做法+教程"
+    },
+    {
+      "id": "R029",
+      "name": "拍黄瓜",
+      "category": "凉菜",
+      "difficulty": "简单",
+      "cook_time_min": 10,
+      "ingredients": ["V005", "V010", "C001", "C006", "C007", "C009"],
+      "url": "https://search.bilibili.com/all?keyword=拍黄瓜+做法+教程"
+    },
+    {
+      "id": "R030",
+      "name": "醋溜白菜",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["V006", "V010", "C001", "C002", "C007", "C005", "C013"],
+      "url": "https://search.bilibili.com/all?keyword=醋溜白菜+做法+教程"
+    },
+    {
+      "id": "R031",
+      "name": "鱼香茄子",
+      "category": "川菜",
+      "difficulty": "中等",
+      "cook_time_min": 30,
+      "ingredients": ["V007", "V010", "V011", "M001", "C001", "C002", "C003", "C007", "C005", "C009", "C016"],
+      "url": "https://search.bilibili.com/all?keyword=鱼香茄子+做法+教程"
+    },
+    {
+      "id": "R032",
+      "name": "虎皮青椒",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["V008", "C001", "C003", "C007", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=虎皮青椒+做法+教程"
+    },
+    {
+      "id": "R033",
+      "name": "洋葱炒牛肉",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["M007", "V009", "V010", "C001", "C003", "C005", "C016"],
+      "url": "https://search.bilibili.com/all?keyword=洋葱炒牛肉+做法+教程"
+    },
+    {
+      "id": "R034",
+      "name": "蒜蓉炒香菇",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["V012", "V010", "C001", "C003", "C005", "C006"],
+      "url": "https://search.bilibili.com/all?keyword=蒜蓉炒香菇+做法+教程"
+    },
+    {
+      "id": "R035",
+      "name": "金针菇牛肉卷",
+      "category": "烤制",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["M007", "V013", "C001", "C003", "C006"],
+      "url": "https://search.bilibili.com/all?keyword=金针菇牛肉卷+做法+教程"
+    },
+    {
+      "id": "R036",
+      "name": "皮蛋豆腐",
+      "category": "凉菜",
+      "difficulty": "简单",
+      "cook_time_min": 10,
+      "ingredients": ["V014", "V010", "C001", "C003", "C006"],
+      "url": "https://search.bilibili.com/all?keyword=皮蛋豆腐+做法+教程"
+    },
+    {
+      "id": "R037",
+      "name": "黄豆炖猪蹄",
+      "category": "炖煮",
+      "difficulty": "困难",
+      "cook_time_min": 120,
+      "ingredients": ["V015", "M002", "V010", "V011", "C001", "C003", "C004", "C008", "C014"],
+      "url": "https://search.bilibili.com/all?keyword=黄豆炖猪蹄+做法+教程"
+    },
+    {
+      "id": "R038",
+      "name": "绿豆汤",
+      "category": "汤类",
+      "difficulty": "简单",
+      "cook_time_min": 60,
+      "ingredients": ["V016", "C002", "C017"],
+      "url": "https://search.bilibili.com/all?keyword=绿豆汤+做法+教程"
+    },
+    {
+      "id": "R039",
+      "name": "薯条",
+      "category": "小吃",
+      "difficulty": "简单",
+      "cook_time_min": 30,
+      "ingredients": ["V017", "C001", "C005", "C023"],
+      "url": "https://search.bilibili.com/all?keyword=薯条+自制+做法+教程"
+    },
+    {
+      "id": "R040",
+      "name": "冬瓜排骨汤",
+      "category": "汤类",
+      "difficulty": "简单",
+      "cook_time_min": 60,
+      "ingredients": ["M003", "V018", "V010", "V011", "C001"],
+      "url": "https://search.bilibili.com/all?keyword=冬瓜排骨汤+做法+教程"
+    },
+    {
+      "id": "R041",
+      "name": "南瓜粥",
+      "category": "粥品",
+      "difficulty": "简单",
+      "cook_time_min": 40,
+      "ingredients": ["V019", "S002", "C002"],
+      "url": "https://search.bilibili.com/all?keyword=南瓜粥+做法+教程"
+    },
+    {
+      "id": "R042",
+      "name": "豆芽炒粉丝",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["V020", "S019", "V010", "C001", "C003", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=豆芽炒粉丝+做法+教程"
+    },
+    {
+      "id": "R043",
+      "name": "芹菜炒肉",
+      "category": "家常炒菜",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["V021", "M001", "V010", "C001", "C003", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=芹菜炒肉+做法+教程"
+    },
+    {
+      "id": "R044",
+      "name": "韭菜鸡蛋饺子",
+      "category": "面点",
+      "difficulty": "中等",
+      "cook_time_min": 60,
+      "ingredients": ["V022", "M018", "S020", "C001", "C005", "C006"],
+      "url": "https://search.bilibili.com/all?keyword=韭菜鸡蛋饺子+做法+教程"
+    },
+    {
+      "id": "R045",
+      "name": "莲藕炖排骨",
+      "category": "炖煮",
+      "difficulty": "中等",
+      "cook_time_min": 80,
+      "ingredients": ["V023", "M003", "V010", "V011", "C001", "C008"],
+      "url": "https://search.bilibili.com/all?keyword=莲藕炖排骨+做法+教程"
+    },
+    {
+      "id": "R046",
+      "name": "玉米排骨汤",
+      "category": "汤类",
+      "difficulty": "简单",
+      "cook_time_min": 60,
+      "ingredients": ["V024", "M003", "V003", "C001"],
+      "url": "https://search.bilibili.com/all?keyword=玉米排骨汤+做法+教程"
+    },
+    {
+      "id": "R047",
+      "name": "干锅花椰菜",
+      "category": "川菜",
+      "difficulty": "中等",
+      "cook_time_min": 25,
+      "ingredients": ["V025", "M022", "V010", "V011", "C001", "C005", "C009", "C013"],
+      "url": "https://search.bilibili.com/all?keyword=干锅花椰菜+做法+教程"
+    },
+    {
+      "id": "R048",
+      "name": "蛋炒饭",
+      "category": "主食",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["S001", "M018", "V009", "C001", "C003", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=蛋炒饭+做法+教程"
+    },
+    {
+      "id": "R049",
+      "name": "燕麦牛奶粥",
+      "category": "粥品",
+      "difficulty": "简单",
+      "cook_time_min": 15,
+      "ingredients": ["S010", "M020", "C017"],
+      "url": "https://search.bilibili.com/all?keyword=燕麦牛奶粥+做法+教程"
+    },
+    {
+      "id": "R050",
+      "name": "小米粥",
+      "category": "粥品",
+      "difficulty": "简单",
+      "cook_time_min": 40,
+      "ingredients": ["S011", "C002", "C017"],
+      "url": "https://search.bilibili.com/all?keyword=小米粥+做法+教程"
+    },
+    {
+      "id": "R051",
+      "name": "玉米饼",
+      "category": "面点",
+      "difficulty": "简单",
+      "cook_time_min": 30,
+      "ingredients": ["S012", "M020", "C001", "C002", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=玉米饼+做法+教程"
+    },
+    {
+      "id": "R052",
+      "name": "烤红薯",
+      "category": "小吃",
+      "difficulty": "简单",
+      "cook_time_min": 60,
+      "ingredients": ["S013"],
+      "url": "https://search.bilibili.com/all?keyword=烤红薯+做法+教程"
+    },
+    {
+      "id": "R053",
+      "name": "山药排骨汤",
+      "category": "汤类",
+      "difficulty": "简单",
+      "cook_time_min": 70,
+      "ingredients": ["S014", "M003", "V010", "V011", "C001"],
+      "url": "https://search.bilibili.com/all?keyword=山药排骨汤+做法+教程"
+    },
+    {
+      "id": "R054",
+      "name": "荞麦面拌黄瓜",
+      "category": "主食",
+      "difficulty": "简单",
+      "cook_time_min": 20,
+      "ingredients": ["S016", "V005", "V010", "C001", "C022", "C003", "C007"],
+      "url": "https://search.bilibili.com/all?keyword=荞麦面拌黄瓜+做法+教程"
+    },
+    {
+      "id": "R055",
+      "name": "藜麦蔬菜碗",
+      "category": "健康轻食",
+      "difficulty": "简单",
+      "cook_time_min": 25,
+      "ingredients": ["S017", "V002", "V003", "V004", "C001", "C019", "C007"],
+      "url": "https://search.bilibili.com/all?keyword=藜麦蔬菜碗+做法+教程"
+    },
+    {
+      "id": "R056",
+      "name": "糯米蒸排骨",
+      "category": "蒸制",
+      "difficulty": "中等",
+      "cook_time_min": 60,
+      "ingredients": ["S018", "M003", "V010", "V011", "C001", "C003", "C008", "C009"],
+      "url": "https://search.bilibili.com/all?keyword=糯米蒸排骨+做法+教程"
+    },
+    {
+      "id": "R057",
+      "name": "猪肉白菜炖粉条",
+      "category": "炖煮",
+      "difficulty": "简单",
+      "cook_time_min": 45,
+      "ingredients": ["M001", "V006", "S019", "V010", "V011", "C001", "C003", "C004", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=猪肉白菜炖粉条+做法+教程"
+    },
+    {
+      "id": "R058",
+      "name": "猪肉茴香饺子",
+      "category": "面点",
+      "difficulty": "中等",
+      "cook_time_min": 60,
+      "ingredients": ["S020", "M001", "V011", "C001", "C003", "C006", "C005"],
+      "url": "https://search.bilibili.com/all?keyword=猪肉茴香饺子+做法+教程"
+    },
+    {
+      "id": "R059",
+      "name": "蜜汁芋头",
+      "category": "甜品",
+      "difficulty": "简单",
+      "cook_time_min": 40,
+      "ingredients": ["S024", "C017", "C002", "C018"],
+      "url": "https://search.bilibili.com/all?keyword=蜜汁芋头+做法+教程"
+    },
+    {
+      "id": "R060",
+      "name": "薏米红豆粥",
+      "category": "粥品",
+      "difficulty": "简单",
+      "cook_time_min": 90,
+      "ingredients": ["S021", "V016", "C002", "C017"],
+      "url": "https://search.bilibili.com/all?keyword=薏米红豆粥+做法+教程"
+    }
+  ]
+}

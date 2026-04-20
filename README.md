@@ -1,4 +1,4 @@
-# 🥑 Smart Food Chef | 智能厨师
+# 🥑 Smart Food Chef | 百味智选
 
 > **基于 AI 驱动的个性化健康饮食管理系统**
 >

@@ -2,10 +2,12 @@
 
 > **基于 AI 驱动的个性化健康饮食管理系统**
 >
-> 🚀 **[立即在线体验项目](https://smartfoodchef.vercel.app/)**
+> 🚀 **项目在线体验：**
+> * **主入口：** [立即在线体验](https://smartfoodchef.vercel.app/)
+> * **备用入口（国内加速）：** [腾讯云](https://smart-food-chef-d9f1718t8cef8071-1386324423.tcloudbaseapp.com/smart_food_chef/)
 >
-> 🏆 *2024 创意编程大赛 参赛作品*
-
+> ---
+> 💡 **温馨提示**：为获得最佳显示效果，推荐使用 **Chrome 浏览器** 进行访问。
 ---
 
 ## 🔗 项目链接

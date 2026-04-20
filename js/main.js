@@ -85,12 +85,16 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 // 初始化事件监听
 function initEventListeners() {
-    // 食材仓库鼠标滚轮翻页（使用原生滚动）
+    // 食材仓库鼠标滚轮翻页
     const ingredientsGrid = document.getElementById('ingredients-grid');
     if (ingredientsGrid) {
         ingredientsGrid.addEventListener('wheel', (e) => {
-            // 允许原生滚动行为
-        }, { passive: true });
+            const panel = document.getElementById('ingredient-panel');
+            if (panel) {
+                e.preventDefault();
+                panel.scrollTop += e.deltaY;
+            }
+        }, { passive: false });
     }
 
     // 关于按钮
@@ -122,6 +126,9 @@ function initEventListeners() {
 
     // 为实时配方和数据看板添加鼠标滚轮翻页功能
     initScrollableContainers();
+
+    // 初始化移动端FAB按钮事件
+    initMobileFabEvents();
 
     // 刷新健康小知识
     const btnRefreshTip = document.getElementById('btn-refresh-tip');
@@ -162,25 +169,31 @@ function openModal(modalId) {
 
 // 为性别按钮添加事件监听器
 function initGenderButtonEvents() {
-    // 直接获取性别按钮元素
     const genderMale = document.getElementById('gender-male');
     const genderFemale = document.getElementById('gender-female');
-    
+
+    function applyGenderStyle(activeBtn, inactiveBtn) {
+        // 激活状态：深色背景 + 白色文字 + 深色边框
+        activeBtn.style.backgroundColor = 'hsl(var(--primary))';
+        activeBtn.style.color = 'hsl(var(--primary-foreground))';
+        activeBtn.style.borderColor = 'hsl(var(--primary))';
+        activeBtn.style.fontWeight = '600';
+        // 非激活状态：恢复默认
+        inactiveBtn.style.backgroundColor = '';
+        inactiveBtn.style.color = '';
+        inactiveBtn.style.borderColor = '';
+        inactiveBtn.style.fontWeight = '';
+    }
+
     if (genderMale && genderFemale) {
-        // 为男性按钮添加点击事件
         genderMale.addEventListener('click', () => {
             selectedGender = 'male';
-            // 更新按钮样式
-            genderMale.className = 'flex h-10 items-center justify-center rounded-xl border border-primary bg-primary/10 text-sm font-medium text-primary transition-all';
-            genderFemale.className = 'flex h-10 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-sm font-medium text-muted-foreground transition-all hover:border-primary/50 hover:text-foreground';
+            applyGenderStyle(genderMale, genderFemale);
         });
-        
-        // 为女性按钮添加点击事件
+
         genderFemale.addEventListener('click', () => {
             selectedGender = 'female';
-            // 更新按钮样式
-            genderFemale.className = 'flex h-10 items-center justify-center rounded-xl border border-primary bg-primary/10 text-sm font-medium text-primary transition-all';
-            genderMale.className = 'flex h-10 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-sm font-medium text-muted-foreground transition-all hover:border-primary/50 hover:text-foreground';
+            applyGenderStyle(genderFemale, genderMale);
         });
     }
 }
@@ -203,6 +216,150 @@ function initScrollableContainers() {
         nutritionPanel.addEventListener('wheel', (e) => {
             // 允许原生滚动行为
         }, { passive: true });
+    }
+
+    // 食材网格容器 - ingredients-grid
+    const ingredientsGrid = document.getElementById('ingredients-grid');
+    if (ingredientsGrid) {
+        // 移除多余的阻止默认事件，使用原生滚动
+        ingredientsGrid.addEventListener('wheel', (e) => {
+            // 允许原生滚动行为
+        }, { passive: true });
+    }
+}
+
+// 初始化移动端FAB按钮事件
+function initMobileFabEvents() {
+    const btnToggleRecipe = document.getElementById('btn-toggle-recipe');
+    const btnToggleNutrition = document.getElementById('btn-toggle-nutrition');
+    const btnCloseRecipe = document.getElementById('btn-close-recipe');
+    const btnCloseNutrition = document.getElementById('btn-close-nutrition');
+    const recipePanel = document.getElementById('recipe-panel');
+    const nutritionPanel = document.getElementById('nutrition-panel');
+
+    // 检查是否为移动端竖屏（纵向像素大于横向像素）
+    function isMobilePortrait() {
+        return window.innerHeight > window.innerWidth;
+    }
+
+    // 在移动竖屏下，将面板设置为覆盖层样式
+    function applyMobileOverlayStyle(panel) {
+        panel.style.position = 'fixed';
+        panel.style.inset = '0';
+        panel.style.zIndex = '900';
+        panel.style.overflowY = 'auto';
+        panel.style.backgroundColor = 'hsl(var(--background))';
+        panel.style.padding = '1rem';
+    }
+
+    function removeMobileOverlayStyle(panel) {
+        panel.style.position = '';
+        panel.style.inset = '';
+        panel.style.zIndex = '';
+        panel.style.overflowY = '';
+        panel.style.backgroundColor = '';
+        panel.style.padding = '';
+    }
+
+    // 关闭所有面板
+    function closeAllPanels() {
+        if (recipePanel) {
+            recipePanel.classList.add('hidden');
+            recipePanel.classList.remove('flex');
+        }
+        if (nutritionPanel) {
+            nutritionPanel.classList.add('hidden');
+            nutritionPanel.classList.remove('flex');
+        }
+    }
+
+    // 显示面板
+    function showPanel(panel) {
+        closeAllPanels();
+        applyMobileOverlayStyle(panel);
+        panel.classList.remove('hidden');
+        panel.classList.add('flex');
+    }
+
+    // 为实时配方切换按钮添加点击事件
+    if (btnToggleRecipe && recipePanel) {
+        btnToggleRecipe.addEventListener('click', () => {
+            if (isMobilePortrait()) {
+                if (recipePanel.classList.contains('hidden')) {
+                    showPanel(recipePanel);
+                } else {
+                    closeAllPanels();
+                }
+            }
+        });
+    }
+
+    // 为数据看板切换按钮添加点击事件
+    if (btnToggleNutrition && nutritionPanel) {
+        btnToggleNutrition.addEventListener('click', () => {
+            if (isMobilePortrait()) {
+                if (nutritionPanel.classList.contains('hidden')) {
+                    showPanel(nutritionPanel);
+                } else {
+                    closeAllPanels();
+                }
+            }
+        });
+    }
+
+    // 为实时配方关闭按钮添加点击事件
+    if (btnCloseRecipe && recipePanel) {
+        btnCloseRecipe.addEventListener('click', () => {
+            closeAllPanels();
+            removeMobileOverlayStyle(recipePanel);
+        });
+    }
+
+    // 为数据看板关闭按钮添加点击事件
+    if (btnCloseNutrition && nutritionPanel) {
+        btnCloseNutrition.addEventListener('click', () => {
+            closeAllPanels();
+            removeMobileOverlayStyle(nutritionPanel);
+        });
+    }
+
+    // 屏幕方向改变时：若切换回横屏/桌面，恢复正常布局
+    window.addEventListener('resize', () => {
+        if (!isMobilePortrait()) {
+            // 恢复桌面布局，移除覆盖层样式
+            if (recipePanel) {
+                recipePanel.classList.remove('hidden');
+                recipePanel.classList.add('flex');
+                removeMobileOverlayStyle(recipePanel);
+            }
+            if (nutritionPanel) {
+                nutritionPanel.classList.remove('hidden');
+                nutritionPanel.classList.add('flex');
+                removeMobileOverlayStyle(nutritionPanel);
+            }
+        } else {
+            // 切换到竖屏，默认折叠两个面板
+            if (recipePanel && !recipePanel.classList.contains('hidden')) {
+                applyMobileOverlayStyle(recipePanel);
+            } else if (recipePanel) {
+                closeAllPanels();
+            }
+        }
+    });
+
+    // 控制FAB容器显示（仅在竖屏时显示）
+    const fabContainer = document.getElementById('mobile-fab-container');
+    function updateFabVisibility() {
+        if (fabContainer) {
+            fabContainer.style.display = isMobilePortrait() ? 'flex' : 'none';
+        }
+    }
+    updateFabVisibility();
+    window.addEventListener('resize', updateFabVisibility);
+
+    // 初始化时，如果是移动竖屏，折叠两个面板
+    if (isMobilePortrait()) {
+        closeAllPanels();
     }
 }
 
@@ -241,6 +398,12 @@ function submitPersonalizeForm() {
     userNutritionPlan = getNutritionPlan(userData);
     updateTargetNutritionDisplay();
     closeModal('modal-personalize');
+    
+    // 关闭移动端弹窗
+    const recipePanel = document.getElementById('recipe-panel');
+    const nutritionPanel = document.getElementById('nutrition-panel');
+    if (recipePanel) recipePanel.classList.add('hidden');
+    if (nutritionPanel) nutritionPanel.classList.add('hidden');
 }
 
 // 加载健康小知识数据

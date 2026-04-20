@@ -43,8 +43,11 @@
             </div>
 
             <!-- Middle - Recipe Panel (Selected Ingredients) -->
-            <div class="flex flex-col min-h-0 overflow-hidden rounded-2xl border border-border/50 bg-card p-4 shadow-sm">
-                <h2 class="mb-4 text-lg font-semibold text-foreground">实时配方</h2>
+            <div id="recipe-panel" class="lg:relative fixed inset-0 z-[900] bg-background p-4 overflow-y-auto hidden lg:flex flex-col min-h-0 border border-border/30 rounded-2xl shadow-lg backdrop-blur-xl custom-scrollbar">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold text-foreground">实时配方</h2>
+                    <button id="btn-close-recipe" class="lg:hidden text-sm border px-2 py-1 rounded">关闭</button>
+                </div>
 
                 <!-- Selected Tags -->
                 <div id="selected-tags" class="mb-4 flex flex-wrap gap-2">
@@ -58,8 +61,11 @@
             </div>
 
             <!-- Right - Nutrition Panel (Desktop only) -->
-            <div id="nutrition-panel" class="hidden flex-col min-h-0 overflow-y-auto rounded-2xl border border-border/30 bg-card/80 p-4 shadow-lg backdrop-blur-xl lg:flex custom-scrollbar">
-                <h2 class="mb-4 text-lg font-semibold text-foreground">数据看板</h2>
+            <div id="nutrition-panel" class="lg:relative fixed inset-0 z-[900] bg-background p-4 overflow-y-auto hidden lg:flex flex-col min-h-0 border border-border/30 rounded-2xl shadow-lg backdrop-blur-xl custom-scrollbar">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-semibold text-foreground">数据看板</h2>
+                    <button id="btn-close-nutrition" class="lg:hidden text-sm border px-2 py-1 rounded">关闭</button>
+                </div>
 
                 <!-- Total Calories -->
                 <div class="mb-6 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-4 text-center">
@@ -180,13 +186,18 @@
         </div>
     </main>
 
-    <!-- Mobile FAB for Nutrition Panel -->
-    <button id="mobile-fab" class="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg lg:hidden">
-        <span class="text-2xl">📊</span>
-    </button>
+    <!-- Mobile FABs for Recipe and Nutrition Panels -->
+    <div id="mobile-fab-container" class="fixed bottom-6 right-6 flex flex-col gap-4 z-[999]" style="display:none;">
+        <button id="btn-toggle-nutrition" class="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center text-2xl" title="数据看板">
+            📊
+        </button>
+        <button id="btn-toggle-recipe" class="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center text-2xl" title="实时配方">
+            📝
+        </button>
+    </div>
 
     <!-- About Modal -->
-    <div id="modal-about" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50">
+    <div id="modal-about" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/50">
         <div class="mx-4 max-w-md rounded-2xl bg-card p-6 shadow-lg">
             <h3 class="mb-4 text-lg font-semibold text-foreground">关于百味智选</h3>
             <p class="mb-4 text-sm text-muted-foreground">百味智选是一款智能食材搭配工具，帮助您根据现有食材计算营养成分，并推荐合适的菜谱。</p>
@@ -196,7 +207,7 @@
     </div>
 
     <!-- Help Modal -->
-    <div id="modal-help" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50">
+    <div id="modal-help" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/50">
         <div class="mx-4 max-w-md rounded-2xl bg-card p-6 shadow-lg">
             <h3 class="mb-4 text-lg font-semibold text-foreground">使用帮助</h3>
             <div class="mb-4 space-y-2 text-sm text-muted-foreground">
@@ -205,13 +216,14 @@
                 <p><strong>3. 查看营养：</strong>右侧面板实时显示营养成分总和。</p>
                 <p><strong>4. 推荐菜谱：</strong>根据已选食材自动推荐匹配度≥70%的菜谱。</p>
                 <p><strong>5. 查看教程：</strong>点击菜谱卡片可跳转到B站查看教学视频。</p>
+                <p><strong>6. 手机操作：</strong>点击右下角 📝 查看实时配方，点击 📊 开启数据看板。</p>
             </div>
             <button onclick="closeModal('modal-help')" class="w-full rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">关闭</button>
         </div>
     </div>
 
     <!-- Personalize Modal -->
-    <div id="modal-personalize" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50">
+    <div id="modal-personalize" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/50">
         <div class="mx-4 max-w-md rounded-2xl bg-card p-6 shadow-lg">
             <div class="mb-4 flex flex-col items-center">
                 <img src="/assets/logo.jpg" alt="百味智选 Logo" class="mb-2 h-12 w-auto object-contain" />

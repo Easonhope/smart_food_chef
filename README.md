@@ -61,13 +61,3 @@
 | ![首页截图](https://github.com/user-attachments/assets/53541fb7-b480-4aa2-adad-d4a366e8757e) | ![弹窗截图](https://github.com/user-attachments/assets/57695308-9d38-4d80-b46e-3f9810e5a6f0) |
 
 ---
-
-## 👥 团队介绍
-
-**团队名称**：灵感原点 (Origin Lab)
-**成员简介**：全栈开发者，擅长利用 AI 工具组链，快速将创意产品化。
-
----
-
-## 📄 开源协议
-本项目基于 [MIT License](LICENSE) 开源。
